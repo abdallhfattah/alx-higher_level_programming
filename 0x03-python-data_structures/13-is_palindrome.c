@@ -51,7 +51,7 @@ int is_palindrome(listint_t **head)
 		// }
 		slow = slow->next;
 	}
-
+	slow = !fast ? slow->next : slow->next;
 	dup = slow;
 
 	reverse_listint(&dup);
