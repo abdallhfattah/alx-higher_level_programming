@@ -39,17 +39,17 @@ int is_palindrome(listint_t **head)
 	while (fast && fast->next)
 	{
 		fast = fast->next->next;
+		if (!fast)
+		{
+			dup = slow->next;
+			break;
+		}
+		if (!fast->next)
+		{
+			dup = slow->next->next;
+			break;
+		}
 		slow = slow->next;
-		// if (!fast)
-		// {
-		// 	dup = slow->next;
-		// 	break;
-		// }
-		// if (!fast->next)
-		// {
-		// 	dup = slow->next->next;
-		// 	break;
-		// }
 	}
 
 	reverse_listint(&dup);
