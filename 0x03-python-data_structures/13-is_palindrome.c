@@ -52,7 +52,7 @@ int is_palindrome(listint_t **head)
 		slow = slow->next;
 	}
 
-	dup = slow->next;
+	dup = slow;
 
 	reverse_listint(&dup);
 
