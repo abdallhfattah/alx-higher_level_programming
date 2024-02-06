@@ -21,15 +21,15 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, size):
-        if not isinstance(size, int):
+    def size(self, s):
+        if not isinstance(s, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        if s < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size = s
 
     def my_print(self):
-        for i in range(self.__size):
-            for j in range(self.__size):
+        for i in range(self.size):
+            for j in range(self.size):
                 print("#", end="\n" if j == self.__size - 1 and i != j else "")
             print()
