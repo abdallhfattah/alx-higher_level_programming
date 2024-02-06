@@ -33,10 +33,12 @@ class Square:
         self.__size = size
 
     def my_print(self):
-        for dummys in range(self.__size):
-            for dummy in range(self.__size):
+        for i in range(self.__size):
+            for j in range(self.__size):
                 print("#")
-            print()
+
+            if(i != self.__size - 1):
+                print("")
 
         if (self.__size == 0):
             print()
