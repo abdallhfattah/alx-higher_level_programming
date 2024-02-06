@@ -37,4 +37,6 @@ class Square:
             for dummy in range(self.__size):
                 print("#")
             print()
-        print()
+
+        if (self.__size == 0):
+            print()
