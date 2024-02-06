@@ -2,7 +2,13 @@
 """Square model"""
 
 
-class Square():
-    """Defines a square."""
-    __size 
-    pass
+class Square:
+    """Defines square"""
+
+    def __init__(self, size):
+        """Constructor.
+
+        Args:
+            size: length of a square.
+        """
+        self.__size = size
