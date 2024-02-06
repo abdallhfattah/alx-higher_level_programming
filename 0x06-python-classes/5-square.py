@@ -33,7 +33,7 @@ class Square:
         self.__size = size
 
     def my_print(self):
-        for dummys in range(self.__siz):
+        for dummys in range(self.__size):
             for dummy in range(self.__size):
                 print("#")
             print()
