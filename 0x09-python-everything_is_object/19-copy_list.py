@@ -1,3 +1,3 @@
-#!/usr/bin/python3ش
+#!/usr/bin/python3
 def copy_list(l):
-    return l[:]asdf
+    return l[:]
