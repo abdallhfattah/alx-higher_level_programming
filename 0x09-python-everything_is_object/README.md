@@ -1,1 +1,1 @@
-how i forgot to tpye smth here
+every thing is a object
