@@ -24,4 +24,5 @@ class Student:
         """Replace all attributes of the Student."""
 
         for k, v in json.items():
-            setattr(self, k, v)
+            if k in self.__dict__:
+                self.__dict__[k] = v
