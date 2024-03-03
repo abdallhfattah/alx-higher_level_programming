@@ -10,6 +10,7 @@ status_codes = {
     '402': 0,
     '403': 0,
     '404': 0,
+    '405': 0,
     '500': 0,
 }
 
@@ -18,8 +19,8 @@ total_size = i = 0
 
 def log_printer():
     """this function printing informations"""
-    print(f'File size: {total_size}')
 
+    print(f'File size: {total_size}')
     for code, count in sorted(status_codes.items()):
         if count > 0:
             print(f"{code}: {count}")
@@ -37,6 +38,6 @@ try:
 
         if i % 10 == 0:
             log_printer()
-        log_printer()
+    log_printer()
 except KeyboardInterrupt as error:
     log_printer()
