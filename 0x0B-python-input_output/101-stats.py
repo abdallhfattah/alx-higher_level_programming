@@ -25,10 +25,14 @@ def log_printer():
 try:
     for line in stdin:
         spplited_line = line.split()
-        status_code = spplited_line[-2]
-        total_size += spplited_line[-1]
-        status_codes[status_code] += 1
+        if spplited_line >= 2:
+            status = spplited_line[-2]
+            total_size += spplited_line[-1]
+    
+            if status in status_codes:
+                status_codes[status] += 1
         i += 1
+
         if i %10 == 0:
             log_printer()
         log_printer()
