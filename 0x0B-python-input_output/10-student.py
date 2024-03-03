@@ -24,7 +24,7 @@ class Student:
             return self.__dict__
 
         my_dict = dict()
-        for key, val in self:
+        for key, val in self.__dict__.items():
             if key in attrs:
                 my_dict[key] = val
 
