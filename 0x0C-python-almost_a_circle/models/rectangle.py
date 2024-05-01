@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
 """Class definition for Rectangle"""
 from models.base import Base
 
@@ -160,3 +160,6 @@ class Rectangle(Base):
             "x": self.x,
             "y": self.y
         }
+
+# if __name__ == "__main__":
+print("hello\n")
