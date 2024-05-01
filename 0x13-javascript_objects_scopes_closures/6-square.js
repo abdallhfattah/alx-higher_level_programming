@@ -1,1 +1,9 @@
-#/usr/bin/node /home/abdallh/Desktop/alx/alx-higher_level_programming/0x12-javascript-warm_up/1-multi_languages.js
+#!/usr/bin/node
+const Rectangle = require('./4-rectangle');
+class Square extends Rectangle {
+  constructor (size) {
+    super(size, size);
+  }
+}
+
+module.exports = Square;
