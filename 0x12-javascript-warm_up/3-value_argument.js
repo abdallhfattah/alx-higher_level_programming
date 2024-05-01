@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 if (process.argv.length > 2) {
-    console.log();
+  console.log();
 } else {
-    console.log('No argument');
+  console.log('No argument');
 }
