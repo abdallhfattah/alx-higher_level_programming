@@ -1,1 +1,10 @@
-#/usr/bin/node /home/abdallh/Desktop/alx/alx-higher_level_programming/0x12-javascript-warm_up/1-multi_languages.js
+#!/usr/bin/node
+
+function nbOccurences (array, num) {
+  let occ = 0;
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    if (element === num) occ++;
+  }
+  return occ;
+}
