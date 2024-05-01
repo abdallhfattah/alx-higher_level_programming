@@ -1,11 +1,13 @@
 #!/usr/bin/node
+function fact (n) {
+  if (n < 0) {
+    return (-1);
+  }
+  if (n === 0 || isNaN(n)) {
+    return 1;
+  }
 
-if (isNaN(parseInt(process.argv[2]))) {
-    console.log(1);
-} else {
-    let result = 1;
-    for (let fact = 1; fact <= parseInt(process.argv[2]); fact++) {
-        result *= fact;
-    }
-    console.log(result);
+  return n * fact(n - 1);
 }
+
+console.log(fact(Number(process.argv[2])));
