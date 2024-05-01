@@ -1,6 +1,5 @@
 #!/usr/bin/node
-
-function nbOccurences (array, num) {
+exports.nbOccurences = function (array, num) {
   let occ = 0;
   for (let index = 0; index < array.length; index++) {
     const element = array[index];
