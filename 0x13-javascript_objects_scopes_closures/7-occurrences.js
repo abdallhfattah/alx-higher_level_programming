@@ -6,4 +6,4 @@ exports.nbOccurences = function (array, num) {
     if (element === num) occ++;
   }
   return occ;
-}
+};
