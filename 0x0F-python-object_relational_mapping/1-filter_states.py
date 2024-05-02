@@ -11,7 +11,8 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states")
     rows = cur.fetchall()
     for row in rows:
-        if(row.startswith('(N')):
+        id , state = row.split(',')
+        if(state.startswith(' (N')):
             print(row)
     cur.close()
     conn.close()
