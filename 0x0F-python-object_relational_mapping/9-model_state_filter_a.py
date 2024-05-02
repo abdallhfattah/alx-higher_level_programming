@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-fetch first state 
+fetch first state
 """
 import sys
 
@@ -14,4 +14,5 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    instances = session.query(State).filter()
+    for instance in session.query(State).filter(State.name.contains('a')).order_by(State.id):
+        print(instance.id, instance.name, sep=": ")
