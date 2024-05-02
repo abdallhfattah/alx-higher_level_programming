@@ -16,7 +16,7 @@ if __name__ == "__main__":
     session = Session()
     state = sys.argv[4]
 
-    instances = len(session.query(State).filter_by(state))
+    instances = len(session.query(State).filter_by(State.name == state))
     if instances == 0:
         print("Not found")
     else:
