@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-fetch first state 
+fetch first state
 """
 import sys
 
@@ -18,4 +18,4 @@ if __name__ == "__main__":
     if instance is None:
         print("Nothing")
     else:
-        print(instance.id , instance.name , sep=": ")
+        print(instance.id, instance.name, sep=": ")
