@@ -9,7 +9,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cur = conn.cursor()
     state = sys.argv[4]
-    cur.execute(f"SELECT * FROM states WHERE name = {state}")
+    cur.execute("SELECT * FROM states WHERE name = {}".format(state))
     rows = cur.fetchall()
     for row in rows:
         print(row)
