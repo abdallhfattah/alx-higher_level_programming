@@ -10,7 +10,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     match = sys.argv[4]  # state
     cur.execute(
-        """SELECT cities.name FROM cities JOIN states ON state.id = cities.states_id 
+        """SELECT cities.name FROM cities JOIN states ON states.id = cities.state_id 
         WHERE states.name LIKE %s""", (match, ))
     rows = cur.fetchall()
     for row in rows:
