@@ -10,6 +10,8 @@ if __name__ == "__main__":
     cur = conn.cursor()
     state = sys.argv[4]
     if (state.find('--') or state.find('TRUNCATE') or state.find('DROP') or state.find('ALTER')):
+        cur.close()
+        conn.close()
         sys.exit()
     cur.execute(
         "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(state))
