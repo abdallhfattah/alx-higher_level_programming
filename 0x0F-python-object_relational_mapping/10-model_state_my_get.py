@@ -19,4 +19,4 @@ if __name__ == "__main__":
     if instances is None:
         print("Not found")
     else:
-        print(instances.id)
+        print(instances[0].id)
