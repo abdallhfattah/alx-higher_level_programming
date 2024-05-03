@@ -19,3 +19,4 @@ if __name__ == "__main__":
         State.id == City.state_id).all()
     for state, city in reuslts:
         print(f"{state.name}: ({city.id}) {city.name}")
+    session.close()
