@@ -15,9 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    reuslts = session.query(State , City).filter(State.id == City.state_id).all()
-    for state , city in reuslts:
+    reuslts = session.query(State, City).filter(
+        State.id == City.state_id).all()
+    for state, city in reuslts:
         print(f"{state.name}: ({city.id}) {city.name}")
-    
-
-# <state name>: (<city id>) <city name>
